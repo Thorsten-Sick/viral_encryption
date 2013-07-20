@@ -1,0 +1,8 @@
+<!ENTITY viral.label "Your localized menuitem">
+<!ENTITY viralContext.label "Your Menuitem">
+<!ENTITY viralContext.accesskey "Y">
+<!ENTITY viralToolbarButton.label "Your Toolbar Button">
+<!ENTITY viralToolbarButton.tooltip "This is your toolbar button!">
+<!ENTITY viralSidebar.label "Your Sidebar">
+<!ENTITY viralToolbar.name  "example">
+<!ENTITY viralToolbar.label "This is an example toolbar. You can hide it under View &gt; toolbars &gt; &viralToolbar.name;">

@@ -51,6 +51,14 @@ window.addEventListener("load", function _overlay_eventListener () {
           var pgp = false;
           var sender = ""
 
+	  var prefs = Components.classes["@mozilla.org/preferences-service;1"]
+                    .getService(Components.interfaces.nsIPrefService);
+	  prefs = prefs.getBranch("extensions.viral.");
+          if (prefs.getBoolPref("installed")){ 
+              // The user has already been asked once
+              return;
+          }
+
 	  hdrLines.forEach(function(line, number, all) {
 		  if(line[0] == " " || line[0] == "\t") {
 			  currentHeader += " " + line.replace(/^\s+|\s+$/g, '');
@@ -69,8 +77,18 @@ window.addEventListener("load", function _overlay_eventListener () {
 	  }
 	  });
           if (pgp){
+	      try{
+		      if (prefs.getBoolPref("asked_for_"+sender)) {
+		       // Asked for this person already
+		       return;
+		      }
+		}
+              catch (e){}
+
+              prefs.setBoolPref("asked_for_"+sender, true);
               var params = {inn:{name:sender}, out:null};
 		openDialog("chrome://viral/content/install_dialog.xul","", "", params);
+              
           }
   }
 

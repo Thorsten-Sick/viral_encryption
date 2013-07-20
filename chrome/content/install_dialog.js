@@ -51,5 +51,10 @@ function onOK() {
   aInstall.install();
 }, "application/x-xpinstall");
 
+   var prefs = Components.classes["@mozilla.org/preferences-service;1"]
+                    .getService(Components.interfaces.nsIPrefService);
+   prefs = prefs.getBranch("extensions.viral.");
+   prefs.setBoolPref("installed", true);
+
    return true;
 }

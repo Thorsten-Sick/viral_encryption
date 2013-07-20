@@ -11,5 +11,6 @@
   windowtype="myDialogWindowType">
 
   <script type="application/javascript" src="chrome://viral/content/install_dialog.js"/>
-One of your friends wants to receive encrypted mails. Click OK to install Enigmail and automatically send encrypted mails to him/her.
+<label id="name"/> wants to receive encrypted mails. Click OK to install Enigmail and automatically send encrypted mails to him/her.
+This all will be fully automatic.
 </dialog>

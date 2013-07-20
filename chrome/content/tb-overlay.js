@@ -296,7 +296,8 @@ window.addEventListener("load", function _overlay_eventListener () {
 function btn_click(e){ 
 	var myPanel = document.getElementById("viral-panel");
 	myPanel.label = "Stop clicking me!";
-	openDialog("chrome://viral/content/install_dialog.xul")
+	var params = {inn:{name:"foo bar"}, out:null};
+	openDialog("chrome://viral/content/install_dialog.xul","", "", params);
 }
 
 

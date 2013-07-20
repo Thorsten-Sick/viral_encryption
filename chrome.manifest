@@ -1,6 +1,5 @@
 content   viral                 chrome/content/
 skin      viral   classic/1.0   chrome/skin/
 locale    viral   en-US         chrome/locale/en-US/
-overlay	chrome://browser/content/browser.xul	chrome://viral/content/ff-overlay.xul
 style	chrome://global/content/customizeToolbar.xul	chrome://viral/skin/overlay.css
 overlay chrome://messenger/content/messenger.xul chrome://viral/content/tb-overlay.xul

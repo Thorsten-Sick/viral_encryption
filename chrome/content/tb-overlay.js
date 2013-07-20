@@ -66,7 +66,7 @@ window.addEventListener("load", function _overlay_eventListener () {
 		  else
 	  {
 		  if(currentHeader.length > 0) {
-			if (currentHeader.search(/OpenPGP:/) != -1) {  // Remark: Must be at start of header, for testing reasons this regex is wrong
+			if (currentHeader.search(/^OpenPGP:/) != -1) {
 				pgp=true;
 			}
                         if (currentHeader.search(/^From: /) != -1) { 
